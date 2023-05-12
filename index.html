@@ -64,19 +64,21 @@
 
             <div class="col-7">
                 <div class="row">
-                    <hr class="border border-dark">
                     <div class="col-4">
-                        GASTO
+                        Nombre Gasto
                         <p id="agregarGasto"></p>
                     </div>
                     <div class="col-8">
-                        VALOR
+                        Valor
                         <p id="agregarValor"></p>
                     </div>
+                    <hr class="border border-dark">
                 </div>
             </div>
+            <ul id="listadoGastos" class="list-group list-group-flush border-bottom">
+                </ul>
 
-            <button type="button" onclick="resetBudget()" class="col-2 m-3 btn btn-success">Reiniciar</button>
+            <button type="button" onclick="limpiar()" class="col-2 m-3 btn btn-success">Reiniciar</button>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

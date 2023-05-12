@@ -35,7 +35,7 @@ function guardarGasto() {
 function mostrarSaldo() {
     var totalGasto = 0;
     $.each(gastos, function (index, gasto) {
-        console.log(gasto);
+        //console.log(gasto);
         totalGasto += gasto.monto;
     });
     saldo = presupuesto - totalGasto
@@ -43,21 +43,17 @@ function mostrarSaldo() {
     $("#mostrarSaldo").html("$" + saldo.toLocaleString('es-CL'));
 }
 
-// document.getElementById("examplePresupuesto").addEventListener("change", function() {
-// 			presupuesto = parseInt(document.getElementById("examplePresupuesto").value);
-// 			document.getElementById("agregarValor").innerHTML = presupuesto;
-// 			remainingBudget = presupuesto - monto;
-// 			document.getElementById("mostrarSaldo").innerHTML = remainingBudget;
-// 		});
-
+function borrarGasto() {
+    
+}
 
 function limpiar() {
 			gastos = 0;
 			presupuesto = 0;
 			saldo = 0;
-			document.getElementById("mostrarPresupuesto").innerHTML = "$";
-			document.getElementById("mostrarGastos").innerHTML = "$";
-			document.getElementById("mostrarSaldo").innerHTML = "$";
-			document.getElementById("agregarGasto").innerHTML = "";
-			document.getElementById("agregarValor").innerHTML = "$";
+			$("#mostrarPresupuesto").html("$");
+			$("#mostrarGastos").html("$");
+			$("#mostrarSaldo").html("$");
+            $("#agregarGasto").html("");
+			$("#agregarValor").html("$");
 		}
